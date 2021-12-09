@@ -1,0 +1,192 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Olsera Api Test",
+		"_postman_id": "e7d3869c-0366-f52d-4ea0-e2d7b6a6574b",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Item",
+			"description": "",
+			"item": [
+				{
+					"name": "create item",
+					"request": {
+						"url": "http://olsera-api.test/api/item",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nama",
+									"value": "text",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": "create item"
+					},
+					"response": []
+				},
+				{
+					"name": "index item",
+					"request": {
+						"url": "http://olsera-api.test/api/item",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": "index item"
+					},
+					"response": []
+				},
+				{
+					"name": "update item",
+					"request": {
+						"url": "http://olsera-api.test/api/item/1",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nama",
+									"value": "baju batik",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": "update item"
+					},
+					"response": []
+				},
+				{
+					"name": "delete item",
+					"request": {
+						"url": "http://olsera-api.test/api/item/4",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": "delete item"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pajak",
+			"description": "",
+			"item": [
+				{
+					"name": "index pajak",
+					"request": {
+						"url": "http://olsera-api.test/api/pajak",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": "index pajak"
+					},
+					"response": []
+				},
+				{
+					"name": "create pajak",
+					"request": {
+						"url": "http://olsera-api.test/api/pajak",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nama",
+									"value": "pph",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "rate",
+									"value": "2.0",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": "create pajak"
+					},
+					"response": []
+				},
+				{
+					"name": "update pajak",
+					"request": {
+						"url": "http://olsera-api.test/api/pajak/3",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nama",
+									"value": "pajak iklan",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "rate",
+									"value": "0.1",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": "update pajak"
+					},
+					"response": []
+				},
+				{
+					"name": "delete pajak",
+					"request": {
+						"url": "http://olsera-api.test/api/pajak/3",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": "delete pajak"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "satu query",
+			"request": {
+				"url": "http://olsera-api.test/api/get_products",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "satu query"
+			},
+			"response": []
+		}
+	]
+}

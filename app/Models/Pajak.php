@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pajak extends Model
 {
+    protected $primaryKey = 'id';
     use HasFactory;
 }

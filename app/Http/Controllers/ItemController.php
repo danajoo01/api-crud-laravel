@@ -18,21 +18,28 @@ class ItemController extends Controller
     {
         //
         $request->validate([
-            'id'=>'required',
+            'id'=>'required|numeric',
             'name'=>'required',
-
-
         ]);
        return Item::create($request->all());
     }
 
     public function create(Request $request){
         $item = new Item;
-        $item->id = $request->id;
         $item->nama = $request->nama;
         $item->save();
 
         return $item;
+    }
+
+    public function update(Request $request, $id){
+        $nama = $request->nama;
+
+        $item = Item::find($id);
+        $item->nama = $nama;
+        $item->save();
+
+        return "Data berhasil di update";
     }
 
     public function delete($id){
