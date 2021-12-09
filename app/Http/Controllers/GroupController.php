@@ -13,7 +13,7 @@ class GroupController extends Controller
     public function index()
     {
         $get_item = Item::select('id','nama')->groupBy('id','nama')->get();
-        $get_pajak = Pajak::select('id','nama')->groupBy('id','nama','rate')->get();
+        $get_pajak = Pajak::select('id','nama','rate')->groupBy('id','nama','rate')->get();
         $data = [
             'data' => $get_item,
             'Pajak' => [
